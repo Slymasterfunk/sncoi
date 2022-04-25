@@ -1,3 +1,7 @@
+// ---------------------- //
+//       Particles        //
+// ---------------------- //
+
 let max_particles    = 2500;
 let particles        = [];
 let frequency        = 10;
@@ -5,13 +9,13 @@ let init_num         = max_particles;
 let max_time         = frequency*max_particles;
 let time_to_recreate = false;
 
-// Enable repopolate
+// Enable repopulate
 setTimeout(function(){
   time_to_recreate = true;
 }.bind(this), max_time)
 
-// Popolate particles
-popolate(max_particles);
+// Populate particles
+populate(max_particles);
 
 var tela = document.createElement('canvas');
     tela.width = $(window).width();
@@ -34,15 +38,12 @@ class Particle{
       y: $(window).height()/2
     }
 
-
-
     if( Math.random() > 0.5){
       this.x = $(window).width()*Math.random()
       this.y = Math.random() > 0.5 ? -Math.random() - 100 : $(window).height() + Math.random() + 100
     }else{
       this.x = Math.random() > 0.5 ? -Math.random() - 100 : $(window).width() + Math.random() + 100
       this.y = $(window).height()*Math.random()
-
     }
 
     this.s = Math.random() * 2;
@@ -71,7 +72,6 @@ class Particle{
   }
 
   move(){
-
     let p1 = {
       x: this.x,
       y: this.y
@@ -97,7 +97,7 @@ class Particle{
   }
 }
 
-function popolate(num){
+function populate(num){
   for (var i = 0; i < num; i++) {
     setTimeout(
       function(x){
@@ -106,7 +106,8 @@ function popolate(num){
           particles.push(new Particle(canvas))
         };
       }(i)
-      ,frequency*i);
+      ,frequency*i
+    );
   }
   return particles.length
 }
@@ -126,27 +127,17 @@ function clear(){
   canvas.globalAlpha=1;
 }
 
-/*
- * Function to update particles in canvas
- */
+// Function to update particles in canvas
 function update(){
   particles = particles.filter(function(p) { return p.move() })
   // Recreate particles
   if(time_to_recreate){
-    if(particles.length < init_num){ popolate(1); console.log("Ricreo") }
+    if(particles.length < init_num){ populate(1); console.log("Ricreo") }
   }
   clear();
   requestAnimationFrame(update.bind(this))
 }
 update()
-
-// Hamburger Menu
-$(document).ready(function(){
-	$('#hamburger').click(function(){
-		$(this).toggleClass('open');
-	});
-});
-
 
 // ---------------------- //
 //          Menu          //
@@ -180,10 +171,10 @@ var tlClose = new TimelineMax({paused: true});
 //OPEN TIMELINE
 tlOpen.add("preOpen")
   .to(logo, 0.4, {
-            scale: 0.8,
-            opacity: 0,
-            ease: Power2.easeOut
-        }, "preOpen")
+    scale: 0.8,
+    opacity: 0,
+    ease: Power2.easeOut
+  }, "preOpen")
 .to(openTriggerTop, 0.4, {
   x: "+80px", y: "-80px", delay: 0.1, ease: Power4.easeIn, onComplete: function() {
     closeTrigger.css('z-index','25');
@@ -283,16 +274,16 @@ tlClose.add("close")
 //EVENTS
 openTrigger.on('click', function(){
   if(tlOpen.progress() < 1){
-                tlOpen.play();
-            } else {
-                tlOpen.restart();
-            }
+    tlOpen.play();
+  } else {
+    tlOpen.restart();
+  }
 });
        
 closeTrigger.on('click', function(){
   if(tlClose.progress() < 1){
-                tlClose.play();
-            } else {
-                tlClose.restart();
-            }
+    tlClose.play();
+  } else {
+    tlClose.restart();
+  }
 });
