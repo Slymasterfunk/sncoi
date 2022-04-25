@@ -139,3 +139,10 @@ function update(){
   requestAnimationFrame(update.bind(this))
 }
 update()
+
+// Hamburger Menu
+$(document).ready(function(){
+	$('#hamburger').click(function(){
+		$(this).toggleClass('open');
+	});
+});
