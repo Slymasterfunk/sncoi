@@ -18,9 +18,9 @@ setTimeout(function(){
 populate(max_particles);
 
 var tela = document.createElement('canvas');
-    tela.width = $(window).width();
-    tela.height = $(window).height();
-    $("#body").append(tela);
+  tela.width = $(window).width();
+  tela.height = $(window).height();
+  $("#index").append(tela);
 
 var canvas = tela.getContext('2d');
 
@@ -218,17 +218,17 @@ tlOpen.add("preOpen")
 //CLOSE TIMELINE
 tlClose.add("close")
   .to(menuTop, 0.2, {
-  backgroundColor: "#01001d", ease: Power4.easeInOut, onComplete: function() {
+  backgroundColor: "#ffffff", ease: Power4.easeInOut, onComplete: function() {
     logo.css('z-index','26');
     closeTrigger.css('z-index','5');
  openTrigger.css('visibility','visible');
   }
 }, "close")
 .to(menuMiddle, 0.2, {
-  backgroundColor: "#01001d", ease: Power4.easeInOut
+  backgroundColor: "#ffffff", ease: Power4.easeInOut
 }, "close") 
 .to(menuBottom, 0.2, {
-  backgroundColor: "#01001d", ease: Power4.easeInOut
+  backgroundColor: "#ffffff", ease: Power4.easeInOut
 }, "close")
   .to(menu, 0.6, {
   y: 20, opacity: 0, ease: Power4.easeOut, onComplete: function() {

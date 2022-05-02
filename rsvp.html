@@ -9,8 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>SNCO Induction - About</title>
 </head>
-<body>
-    <nav class="container">
+<body id="rsvp">
+    <!-- <nav class="container">
         <span class="menu-trigger">
             <i class="menu-trigger-bar top"></i>
             <i class="menu-trigger-bar middle"></i>
@@ -47,12 +47,30 @@
                 </ul>
             </div>
         </div>
-    </nav>
-    <section id="about">
+    </nav> -->
+    <div class="rsvp">
         <div class="container">
-            <h1>RSVP/Donations</h1>
+            <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+            </label>
+            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
+                <p class="hidden">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                <div class="form-control">
+                    <input type="text" name="guestOne" placeholder="Name" required />
+                </div>
+                <div class="form-control">
+                    <input type="text" name="guestTwo" placeholder="Guest Name" required />
+                </div>
+                <div class="form-control">
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
