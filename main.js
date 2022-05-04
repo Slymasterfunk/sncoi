@@ -287,3 +287,21 @@ closeTrigger.on('click', function(){
     tlClose.restart();
   }
 });
+
+// ---------------------- //
+//        RSVP/QRC        //
+// ---------------------- //
+
+function slider() {
+  var sliderInput = document.getElementById("sliderInput");
+  var donate = document.getElementById("donate");
+  var rsvp = document.getElementById("rsvpContent");  
+  
+  if (sliderInput.checked == true){
+    donate.style.display = "block";
+    rsvp.style.display = "none";
+  } else {
+    donate.style.display = "none";
+    rsvp.style.display = "block";
+  }
+}
