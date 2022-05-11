@@ -14,9 +14,33 @@
         <a href="index.html" class="btn"><i class="left"></i></a>
         <div class="container">
             <div id="rsvpContent">
-                <h2 class="text-center">
-                    Selectees! Choose a song to sing at the karaoke event!
-                </h2>
+                <div class="glow">  
+                    <span>S</span>
+                    <span>e</span>
+                    <span>l</span>
+                    <span>e</span>
+                    <span>c</span>
+                    <span>t</span>
+                    <span>e</span>
+                    <span>e</span>
+                    <span>s</span>
+                </div>
+                <div class="glow2">  
+                    <span>G</span>
+                    <span>o</span>
+                    <span>t</span>
+                </div>
+                <div class="glow3">
+                    <span>T</span>
+                    <span>a</span>
+                    <span>l</span>
+                    <span>e</span>
+                    <span>n</span>
+                    <span>t</span>
+                </div>
+                <h3 class="text-center">
+                    Selectees! Place your name below along with a song and artist to sing at the karaoke event!
+                </h3>
                 <form name="song" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                     <input type="hidden" name="form-name" value="song" />
                     <p class="hidden">
@@ -26,10 +50,10 @@
                         <input type="text" name="singer" placeholder="Name" required />
                     </div>
                     <div class="form-control">
-                        <input type="text" name="artist" placeholder="Artist" required />
+                        <input type="text" name="song" placeholder="Song" required />
                     </div>
                     <div class="form-control">
-                        <input type="text" name="song" placeholder="Song" required />
+                        <input type="text" name="artist" placeholder="Artist" required />
                     </div>
                     <input type="submit" value="Submit" class="btn btn-primary" />
                 </form>
