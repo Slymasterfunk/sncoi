@@ -13,13 +13,14 @@
     <div class="rsvp">
         <a href="index.html" class="btn"><i class="left"></i></a>
         <div class="container">
-            <label class="switch">
+            <!-- <label class="switch">
                 <input id="sliderInput" type="checkbox" onclick="slider()" />
                 <span class="slider"></span>
-            </label>
+            </label> -->
+            <h1>RSVP</h1>
             <div id="rsvpContent">
                 <h2 class="text-center">
-                    Per Guest: $45
+                    Selectee Price: $100
                 </h2>
                 <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
@@ -36,22 +37,24 @@
                         <input type="email" name="email" placeholder="Email" required />
                     </div>
                     <div class="radio">
-                        <div class="radio-btn chicken">
-                            <input id="radio-1" type="radio" name="radio" value="chicken" />
-                            <label for="chicken"></label>
-                            <span>Chicken</span>
-                        </div>
                         <div class="radio-btn beef">
-                            <input id="radio-2" type="radio" name="radio" value="beef" checked />
+                            <input id="beef" type="radio" name="radio" value="beef" />
                             <label for="beef"></label>
-                            <span>Beef</span>
+                            <span>Sliced London Broil (beef) w/Au Jus or Chimichurri and Roasted Potatoes</span>
+                        </div>
+                        <div class="radio-btn salmon">
+                            <input id="salmon" type="radio" name="radio" value="salmon" checked />
+                            <label for="salmon"></label>
+                            <span>Baked Salmon w/Dill Sauce or Herb de Provence and Rice Pilaf</span>
                         </div>
                     </div>
                     <input type="submit" value="Submit" class="btn btn-primary" />
                 </form>
             </div>
             <div id="donate">
-                <span></span>
+                <span>
+                    <img src="qrc.png" alt="qrc">
+                </span>
             </div>
         </div>
     </div>
