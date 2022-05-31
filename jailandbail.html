@@ -18,8 +18,10 @@
                     <li>#2 Warrants must be paid prior to pick-up</li>
                     <li>#3 Arrestee can buy theirself out</li>
                 </ul>
+                <small><strong>Judge will send follow-up email concerning arrestee pick-up time and payment.</strong></small>
             </div>
-            <form name="jail" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="index.html">
+            <button id="warrant" class="btn" onclick="warrant()">Buy Warrant</button>
+            <form id="warrantForm" name="jail" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="index.html" class="hidden">
                 <input type="hidden" name="form-name" value="jail" />
                 <p class="hidden">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -31,6 +33,10 @@
                 <div class="form-control">
                     <input type="tel" name="plantiff_phone" placeholder="Phone" required />
                 </div>
+                </p>
+                <div class="form-control">
+                    <input type="email" name="email" placeholder="Personal Email" required />
+                </div>
                 <div class="form-control">
                     <input type="text" name="arrestee" placeholder="Arrestee" required />
                 </div>
@@ -41,5 +47,6 @@
             </form>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

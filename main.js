@@ -321,3 +321,14 @@ function slider() {
     rsvp.style.display = "block";
   }
 }
+
+// ---------------------- //
+//       Jail & Bail      //
+// ---------------------- //
+function warrant() {
+  var warrant = document.getElementById("warrant");
+  var form = document.getElementById("warrantForm");
+
+  warrant.classList.add("hidden");
+  form.classList.remove("hidden");
+}
