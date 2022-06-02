@@ -52,10 +52,16 @@
                     <input type="text" name="arrestee_bldg" placeholder="Arrestee Location (Bldg/Rm)" required />
                 </div>
                 <div class="radio-price">
-                    <input type="radio" id="thirty" name="warrant-price" value="30" />
-                    <label for="thirty">$30</label><br>
-                    <input type="radio" id="sixty" name="warrant-price" value="60" />
-                    <label for="thirty">$60</label>
+                    <div class="thirty">
+                        <input type="radio" id="thirty" name="warrant-price" value="30" />
+                        <label for="thirty"></label>
+                        <span>$30</span><br>
+                    </div>
+                    <div class="sixty">
+                        <input type="radio" id="sixty" name="warrant-price" value="60" checked/>
+                        <label for="sixty"></label>
+                        <span>$60</span>
+                    </div>
                 </div>
                 <input type="submit" value="Submit" class="btn" />
             </form>
