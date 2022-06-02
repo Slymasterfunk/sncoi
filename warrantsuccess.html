@@ -5,62 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Jail & Bail</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>SNCO Induction</title>
 </head>
-<body>
-    <div id="jail">
-        <div class="container">
-            <img src="jandb.png" alt="Jail and Bail">
-            <div class="alert">
-                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                <span class="green-box"></span>
-                <span class="success">SUCCESS</span>
-                <span class="text"><strong>Your warrant has been sent to the judge. You will recieve an email with further instructions for payment and Arrestee pick-up.</strong></span>
-            </div>
-            <div class="rules">
-                <p></p>
-                <h2>Rules:</h2>
-                <ul>
-                    <li>#1 Have Fun</li>
-                    <li>#2 Warrants must be paid prior to pick-up</li>
-                    <li>#3 Arrestee can buy themselves out</li>
-                </ul>
-            </div>
-            <div class="price">
-                <h2>Price:</h2>
-                <ul>
-                    <li>$30 - 30 minutes</li>
-                    <li>$60 - 60 minutes</li>
-                </ul>
-                <small><strong>Judge will send follow-up email concerning arrestee pick-up time and payment.</strong></small>
-            </div>
-            <button id="warrant" class="btn" onclick="warrant()">Buy Warrant</button>
-            <form id="warrantForm" name="jail" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="warrantsuccess.html" class="hidden">
-                <input type="hidden" name="form-name" value="jail" />
-                <p class="hidden">
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                </p>                
-                <div class="form-control">
-                    <input type="text" name="plantiff" placeholder="Name" required />
-                </div>
-                </p>
-                <div class="form-control">
-                    <input type="tel" name="plantiff_phone" placeholder="Phone" required />
-                </div>
-                </p>
-                <div class="form-control">
-                    <input type="email" name="email" placeholder="Personal Email" required />
-                </div>
-                <div class="form-control">
-                    <input type="text" name="arrestee" placeholder="Arrestee" required />
-                </div>
-                <div class="form-control">
-                    <input type="text" name="arrestee_bldg" placeholder="Arrestee Location (Bldg/Rm)" required />
-                </div>
-                <input type="submit" value="Submit" class="btn" />
-            </form>
-        </div>
+<body id="index">
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <span class="green-box"></span>
+        <span class="success">SUCCESS</span>
+        <span class="text"><strong>Your warrant has been sent to the judge. You will recieve an email with further instructions for payment and Arrestee pick-up.</strong></span>
     </div>
+    <div class="logo index">
+        <div class="wing">
+            <img src="wing18.png" alt="18th Wing">
+            <img src="wing353.jpg" alt="353d Wing">
+        </div>
+        <img class="qrc" src="qrc.png" alt="donate qrc">
+    </div>
+    <section class="title">
+        <h3>2 0 2 2 - S N C O</h3>
+        <h1>E7</h1>
+        <div class="btns">
+            <a href="song.html">RELEASE PARTY</a>
+            <a href="info.html">INDUCTION</a>
+        </div>
+    </section>
     <script src="main.js"></script>
 </body>
 </html>

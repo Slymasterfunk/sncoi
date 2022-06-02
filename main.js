@@ -200,6 +200,9 @@ tlOpen.add("preOpen")
   x: "+=80px", y: "-=80px", ease: Power4.easeIn,
   onComplete: function() {
     openTrigger.css('visibility','hidden');
+    menuTop.css('background-color','#ffffff');
+    menuMiddle.css('background-color','#ffffff');
+    menuBottom.css('background-color','#ffffff');
   }
 }, "preOpen")
 .to(openTriggerBottom, 0.4, {
@@ -234,10 +237,10 @@ tlOpen.add("preOpen")
 //CLOSE TIMELINE
 tlClose.add("close")
   .to(menuTop, 0.2, {
-  backgroundColor: "#ffffff", ease: Power4.easeInOut, onComplete: function() {
+    backgroundColor: "#ffffff", ease: Power4.easeInOut, onComplete: function() {
     logo.css('z-index','26');
     closeTrigger.css('z-index','5');
- openTrigger.css('visibility','visible');
+    openTrigger.css('visibility','visible');
   }
 }, "close")
 .to(menuMiddle, 0.2, {
@@ -266,9 +269,9 @@ tlClose.add("close")
   y: "25%",
   ease: Power4.easeInOut,
   onComplete: function() {
-    menuTop.css('background-color','#ffffff');
-    menuMiddle.css('background-color','#ffffff');
-    menuBottom.css('background-color','#ffffff');
+    menuTop.css('background-color','#e7e7e7');
+    menuMiddle.css('background-color','#e7e7e7');
+    menuBottom.css('background-color','#e7e7e7');
   }
 }, "close", "+=0.2")
 .to(closeTriggerLeft, 0.2, {

@@ -12,11 +12,12 @@
         <div class="container">
             <img src="jandb.png" alt="Jail and Bail">
             <div class="rules">
+                <p></p>
                 <h2>Rules:</h2>
                 <ul>
                     <li>#1 Have Fun</li>
                     <li>#2 Warrants must be paid prior to pick-up</li>
-                    <li>#3 Arrestee can buy theirself out</li>
+                    <li>#3 Arrestee can buy themselves out</li>
                 </ul>
             </div>
             <div class="price">
@@ -49,6 +50,12 @@
                 </div>
                 <div class="form-control">
                     <input type="text" name="arrestee_bldg" placeholder="Arrestee Location (Bldg/Rm)" required />
+                </div>
+                <div class="radio-price">
+                    <input type="radio" id="thirty" name="warrant-price" value="30" />
+                    <label for="thirty">$30</label><br>
+                    <input type="radio" id="sixty" name="warrant-price" value="60" />
+                    <label for="thirty">$60</label>
                 </div>
                 <input type="submit" value="Submit" class="btn" />
             </form>
