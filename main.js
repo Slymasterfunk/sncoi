@@ -161,6 +161,7 @@ $(".qrc").click(function (event) {
 
 //OPEN TRIGGER
 var openTrigger = $('.menu-trigger');
+var releaseTrigger = $('.release');
 var openTriggerTop = openTrigger.find('.menu-trigger-bar.top');
 var openTriggerMiddle = openTrigger.find('.menu-trigger-bar.middle');
 var openTriggerBottom = openTrigger.find('.menu-trigger-bar.bottom');
@@ -176,6 +177,7 @@ var logo = $('.logo');
 //MENU
 var menuContainer = $('.menu-container');
 var menu = $('.menu');
+var menu2 = $('.menu2');
 var menuTop = $('.menu-bg.top');
 var menuMiddle = $('.menu-bg.middle');
 var menuBottom = $('.menu-bg.bottom');
@@ -183,6 +185,9 @@ var menuBottom = $('.menu-bg.bottom');
 //TL
 var tlOpen = new TimelineMax({paused: true});
 var tlClose = new TimelineMax({paused: true});
+
+// ADDITIONS
+var selectee = document.getElementById("selectee-container");
 
 //OPEN TIMELINE
 tlOpen.add("preOpen")
@@ -294,16 +299,20 @@ tlClose.add("close")
 openTrigger.on('click', function(){
   if(tlOpen.progress() < 1){
     tlOpen.play();
+    selectee.classList.add("hidden");
   } else {
     tlOpen.restart();
+    selectee.classList.add("hidden");
   }
 });
        
 closeTrigger.on('click', function(){
   if(tlClose.progress() < 1){
     tlClose.play();
+    selectee.classList.remove("hidden");
   } else {
     tlClose.restart();
+    selectee.classList.remove("hidden");
   }
 });
 
