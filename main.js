@@ -348,10 +348,8 @@ function warrant () {
 // ---------------------- //
 //         Alert          //
 // ---------------------- //
-// $(".closebtn").click(function (event) {
-//   $(".alert-rsvp").addClass("hidden");
-// });
-
-function popup () {
-  document.querySelector(".alert-rsvp").classList.add("hidden");
-}
+$(".closebtn").click(function (event) {
+  $(".alert").addClass("hidden");
+  $(".alert-rsvp").addClass("hidden");
+  $(".nav-container").removeClass("hidden");
+});
