@@ -337,10 +337,21 @@ function slider() {
 // ---------------------- //
 //       Jail & Bail      //
 // ---------------------- //
-function warrant() {
+function warrant () {
   var warrant = document.getElementById("warrant");
   var form = document.getElementById("warrantForm");
 
   warrant.classList.add("hidden");
   form.classList.remove("hidden");
+}
+
+// ---------------------- //
+//         Alert          //
+// ---------------------- //
+// $(".closebtn").click(function (event) {
+//   $(".alert-rsvp").addClass("hidden");
+// });
+
+function popup () {
+  document.querySelector(".alert-rsvp").classList.add("hidden");
 }
