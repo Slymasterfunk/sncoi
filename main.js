@@ -205,9 +205,9 @@ tlOpen.add("preOpen")
   x: "+=80px", y: "-=80px", ease: Power4.easeIn,
   onComplete: function() {
     openTrigger.css('visibility','hidden');
-    menuTop.css('background-color','#ffffff');
-    menuMiddle.css('background-color','#ffffff');
-    menuBottom.css('background-color','#ffffff');
+    menuTop.css('background-color','#01001d');
+    menuMiddle.css('background-color','#01001d');
+    menuBottom.css('background-color','#01001d');
   }
 }, "preOpen")
 .to(openTriggerBottom, 0.4, {
@@ -274,9 +274,9 @@ tlClose.add("close")
   y: "25%",
   ease: Power4.easeInOut,
   onComplete: function() {
-    menuTop.css('background-color','#e7e7e7');
-    menuMiddle.css('background-color','#e7e7e7');
-    menuBottom.css('background-color','#e7e7e7');
+    menuTop.css('background-color','transparent');
+    menuMiddle.css('background-color','transparent');
+    menuBottom.css('background-color','transparent');
   }
 }, "close", "+=0.2")
 .to(closeTriggerLeft, 0.2, {
@@ -315,6 +315,26 @@ closeTrigger.on('click', function(){
     selectee.classList.remove("hidden");
   }
 });
+
+const menuBtn = document.querySelector('.nav-container');
+const leftLogo = document.querySelector('.logo-left')
+const rightLogo = document.querySelector('.logo-right')
+
+let showLogo = false;
+
+menuBtn.addEventListener('click', animateLogos);
+
+function toggleLogo() {
+  if (!showMenu) {
+    rightLogo.classList.add('show');
+
+    showLogo = true;
+  } else {
+
+    rightLogo.classList.remove('show');
+    showLogo = false;
+  }
+}
 
 // ---------------------- //
 //        RSVP/QRC        //
